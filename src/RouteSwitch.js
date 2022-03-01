@@ -2,6 +2,7 @@ import { render } from "@testing-library/react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from "./App"
 import Nav from "./constants/Nav";
+import Footer from "./constants/Footer";
 import Home from "./components/Home";
 import Shop from "./components/Shop";
 import Cart from "./components/Cart";
@@ -16,6 +17,7 @@ function RouteSwitch() {
           <Route path="cart" />
         </Route>
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }
