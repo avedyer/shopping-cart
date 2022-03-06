@@ -3,7 +3,6 @@ function Guitar(name, img, amt) {
   return {
     name: name,
     img: img,
-    amt: 0,
   }
 }
 
