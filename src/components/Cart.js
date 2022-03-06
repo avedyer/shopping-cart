@@ -1,7 +1,14 @@
+import { useState } from "react"
+
 function Cart() {
+
+  let [items, setItems] = useState([]);
+
+  
+
   return(
     <div id="cart">
-      Cart
+      
     </div>
   )
 }

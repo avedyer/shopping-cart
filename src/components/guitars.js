@@ -1,7 +1,9 @@
-function Guitar(name, img) {
+function Guitar(name, img, amt) {
+
   return {
     name: name,
-    img: img
+    img: img,
+    amt: 0,
   }
 }
 
