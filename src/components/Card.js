@@ -21,6 +21,7 @@ const Card = (props) => {
         <div className='card'>
             <img src={props.img} alt={props.name} />
             <h3 className='name'>{props.name}</h3>
+            <h4 className='price'>${props.price}</h4>
             <input type="number" defaultValue={1} min={1} max={9} onFocus={(e) => e.target.select()} onChange={handleChange}/>
             <button onClick={() => props.adjustCart(props, amt)}>Add To Cart</button>
         </div>

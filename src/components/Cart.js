@@ -2,8 +2,14 @@ import { useState } from "react"
 
 function Cart(props) {
 
+  let total = 0
+
+  for(let item of props.items) {
+    total += item.guitar.price * item.amt;
+  }
 
   return(
+    props.items.length > 0 ?
     <div id="cart">
       {props.items.map(item => {
         console.log(item)
@@ -11,7 +17,13 @@ function Cart(props) {
           <Item data={item} adjustCart={props.adjustCart}/>
         )
       })}
+      <h4>Total: ${total}</h4>
+      <button>Checkout</button>
     </div>
+    :
+    <h3>
+      Your cart is empty
+    </h3>
   )
 }
 
@@ -33,6 +45,7 @@ function Item(props) {
   return (
     <div className="item">
       <p>{props.data.guitar.name}</p>
+      <p className='price'>${props.data.guitar.price}</p>
       <img src={props.data.guitar.img} />
       <input type="number" defaultValue={props.data.amt} min={1} max={9} onFocus={(e) => e.target.select()} onChange={(e) => handleChange(e)}/>
       <button onClick={() => props.adjustCart(props.data.guitar, 0)}>Remove</button>

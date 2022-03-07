@@ -8,7 +8,7 @@ function Shop (props) {
     <div id="shop">
       <h1>Guitars</h1>
       {guitars.map((guitar) => 
-        <Card name={guitar.name} img={guitar.img} adjustCart={props.adjustCart}/>
+        <Card name={guitar.name} img={guitar.img} price={guitar.price} adjustCart={props.adjustCart}/>
       )}
     </div>
   ) 
