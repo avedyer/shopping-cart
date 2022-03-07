@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 
 const Card = (props) => {
 
@@ -22,7 +22,7 @@ const Card = (props) => {
             <img src={props.img} alt={props.name} />
             <h3 className='name'>{props.name}</h3>
             <input type="number" defaultValue={1} min={1} max={9} onFocus={(e) => e.target.select()} onChange={handleChange}/>
-            <button onClick={() => props.passItemInfo(props, amt)}>Add To Cart</button>
+            <button onClick={() => props.adjustCart(props, amt)}>Add To Cart</button>
         </div>
     )
 }
