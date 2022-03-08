@@ -11,14 +11,18 @@ function Cart(props) {
   return(
     props.items.length > 0 ?
     <div id="cart">
-      {props.items.map(item => {
-        console.log(item)
-        return (
-          <Item data={item} adjustCart={props.adjustCart}/>
-        )
-      })}
-      <h4>Total: ${total}</h4>
-      <button>Checkout</button>
+      <div className="items">
+        {props.items.map(item => {
+          console.log(item)
+          return (
+            <Item data={item} adjustCart={props.adjustCart}/>
+          )
+        })}
+      </div>
+      <div className="total">
+        <h4>Total: ${total}</h4>
+        <button>Checkout</button>
+      </div>
     </div>
     :
     <h3>

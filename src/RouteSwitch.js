@@ -12,7 +12,7 @@ function RouteSwitch() {
     <BrowserRouter>
       <Nav />
       <Routes>
-        <Route path="/" element={<App />}>
+        <Route path="*" element={<App />}>
           <Route path="shop"/>
           <Route path="cart" />
         </Route>

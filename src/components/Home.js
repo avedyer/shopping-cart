@@ -1,7 +1,11 @@
+import { Link } from "react-router-dom"
+
 function Home() {
   return (
     <div id="home">
-      Home
+      <div id="shopPrompt">
+        <Link to="/shop">Shop Now</Link>
+      </div>
     </div>
   )
 }
